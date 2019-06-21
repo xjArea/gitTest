@@ -129,7 +129,7 @@ window.frames 属性其实是页面的 window 对象的别名，也就是说 win
 <script>
 window.onload = function(){
 	// window.frames 属性和 window.length 属性
-	console.log( window.frames );								// Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+	console.log( window.frames );								// Window html01.html
 	console.log( window.frames === window );					// true # window.frames 其实就是等于 window
 	console.log( window.length );								// 1 # 如果页面中没有 iframe 也没有 frame，那么 window.length 就等于 0
 	console.log( window.length === window.frames.length );		// true # 因为 window.frames 就等于 window，所以这两个比对的属性值就是同一个
