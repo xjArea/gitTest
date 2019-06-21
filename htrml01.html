@@ -129,7 +129,7 @@ window.frames 属性其实是页面的 window 对象的别名，也就是说 win
 <script>
 window.onload = function(){
 	// window.frames 属性和 window.length 属性
-	console.log( window.frames );								// Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+	console.log( window.frames );								// Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 	console.log( window.frames === window );					// true # window.frames 其实就是等于 window
 	console.log( window.length );								// 1 # 如果页面中没有 iframe 也没有 frame，那么 window.length 就等于 0
 	console.log( window.length === window.frames.length );		// true # 因为 window.frames 就等于 window，所以这两个比对的属性值就是同一个
@@ -139,8 +139,8 @@ window.onload = function(){
 	console.log( window[0] );									// Window html02.html # 这样获取的是 iframe01 的 window
 	console.log( window[0].location.href );						// http://192.168.1.199:8041/99-test/html02.html # iframe01 的地址
 	// 在全局中自动生成的标签 id 值变量
-	console.log( iframe01 );									// HTMLIframeElement / Window html02.html # Firefox & Chrome 是 HTMLIframeElement，IE 是 Window html02.html
-	console.log( iframe01.contentWindow );						// Window html02.html / undefined # Firefox & Chrome 是 Window html02.html，IE 是 undefined，因为 window 上没有 contentWindow 属性
+	console.log( iframe01 );									// Firefox & Chrome 是 HTMLIframeElement，IE 是 Window html02.html
+	console.log( iframe01.contentWindow );						// Firefox & Chrome 是 Window html02.html，IE 是 undefined
 	// 原生 JS 操作 iframe 标签
 	var iframe01Ele = document.getElementById('iframe01');		// 必须要用选择方法选择标签，不能拿全局中自动生成的对象
 	console.log( iframe01Ele );									// HTMLIFrameElement
@@ -161,9 +161,8 @@ window.frameElement 属性返回页面所在的标签（可能是 iframe 或 obj
 <iframe id="iframe01" src="html02.html"></iframe>
 <script>
 var iframe01Window = document.getElementById('iframe01').contentWindow;
-console.log( iframe01Window.frameElement );												// <iframe id="iframe01" src="html02.html"> # 页面所在的 iframe 标签
-console.log( iframe01Window.frameElement.src );											// http://192.168.1.199:8041/99-test/html02.html
-console.log( iframe01Window.frameElement === document.getElementById('iframe01') );		// true # 就是所在的 iframe 标签
+console.log( iframe01Window.frameElement );												// <iframe id="iframe01" src="html02.html">
+console.log( iframe01Window.frameElement === document.getElementById('iframe01') );		// true
 </script>
 
 
@@ -213,7 +212,7 @@ if( newWindow ){
 	console.log( newWindow.name );					// newWindow
 	console.log( newWindow.opener === window );		// true
 };
-console.log( window.opener );						// null # 如果当前窗口是直接输入 url 进入的，则 window.opener 属性为 null（IE9 为 undefined）
+console.log( window.opener );						// null # 如果当前窗口是用 url 进入的，则 window.opener 属性为 null（IE9 为 undefined）
 </script>
 
 通过 opener 属性，可以获得父窗口的全局属性和方法，但只限于两个窗口同源的情况（参见《同源限制》一章），且其中一个窗口由另一个打开。
