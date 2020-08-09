@@ -1,3 +1,3 @@
 # gitTest
 justTest  
-<https://xjarea.github.io/gitTest/>
+<https://xjArea.github.io/gitTest/>
