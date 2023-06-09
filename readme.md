@@ -1,6 +1,6 @@
 # gitTest
 
-justTest 2023-06-10  
+JustTest 2023-06-10  
 <https://xjArea.github.io/gitTest/>  
 
 
