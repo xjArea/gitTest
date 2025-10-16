@@ -84,10 +84,9 @@ main {
     --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1)
 }
 
-main .pagination-loader-container {
-    background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg)
-}
+main .pagination-loader-container {background-image:url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg);}
+main .gsc-loading-image{background-image:url(https://github.githubassets.com/images/mona-loading-default.gif);}
 
-main .gsc-loading-image {
-    background-image: url(https://github.githubassets.com/images/mona-loading-default.gif)
-}
+.gsc-loading-image {height:64px;width:64px;opacity:0;}
+
+
