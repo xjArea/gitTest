@@ -84,11 +84,11 @@ main {
     --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1)
 }
 
-main .pagination-loader-container {background-image:url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg);}
+main .pagination-loader-container{background-image:url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg);}
 main .gsc-loading-image{background-image:url(https://github.githubassets.com/images/mona-loading-default.gif);}
 
 /* 缩小并隐藏 Loading 图像, 去掉评论和回复的 Foot 精简结构 */
 .gsc-loading{box-sizing:border-box;margin:0;height:64px;overflow:hidden;opacity:0;}
 .gsc-comment-footer, .gsc-reply-footer{display:none;}
 
-
+.gsc-comments{gap:16px;}
