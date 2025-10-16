@@ -87,6 +87,6 @@ main {
 main .pagination-loader-container {background-image:url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg);}
 main .gsc-loading-image{background-image:url(https://github.githubassets.com/images/mona-loading-default.gif);}
 
-.gsc-loading-image {height:64px;width:64px;opacity:0;}
+.gsc-loading{box-sizing:border-box;margin:0;height:64px;overflow:hidden;opacity:0;}
 
 
